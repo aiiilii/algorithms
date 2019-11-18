@@ -10,7 +10,7 @@ public class QuickSort2 {
                 int temp = arr[j];
                 arr[j] = arr[i];
                 arr[i] = temp;
-                i++; // ++ after swap because both start at low instead of i starting at (low-1) and j starting at low
+                i++; // ++ after found smaller than pivot because i starting at (low-1) and j starting at low instead of both starting at low
             }
         }
         int temp = arr[i]; 

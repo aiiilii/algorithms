@@ -6,14 +6,18 @@ public class QuickSort {
 
         for (int j = low; j < high; j++) {
             if (arr[j] < pivot) {
-                i++;
+                i++; // ++ after found smaller than pivot because i starting at (low-1) and j starting at low instead of both starting at low
 
+                // j goes faster until found a number smaller than pivot, will swap with i because all numbers that j visited
+                // before stopping (meaning smaller than pivot) were greater than pivot. So when i++, and swap with j, greater
+                // numbers will go to the right, smaller numbers will go to the left
                 int temp = arr[i];
-                arr[i] = arr[j];
+                arr[i] = arr[j]; 
                 arr[j] = temp;
             }
         }
 
+        // swapping the i+1 with the pivot so the pivot can go to the right place, which is where the partition will happen.
         int temp = arr[i + 1];
         arr[i + 1] = arr[high];
         arr[high] = temp;

@@ -15,7 +15,7 @@ public class BubbleSort {
                     swapped = true;
                 }
             }
-            // if not to elements were swapped by inner loop, then break
+            // if no two elements were swapped by inner loop, then break
             if (swapped == false) {
                 break;
             }
