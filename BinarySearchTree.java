@@ -153,8 +153,9 @@ public class BinarySearchTree {
 
     /**
      * The two functions below does not use recursion and can use contant time to find out whether this tree is a binary search tree
-     * Since the isBSTUtil function takes in a minValue and a maxValue, when we call this function, we may not want to insert a minValue and a maxValue all the time, we have the isBST function that returns the 
-     * result of the isBSTUtil function and has int minvalue and int max value already as parameters
+     * Since the isBSTUtil function takes in a minValue and a maxValue, when we call this function, 
+     * we may not want to insert a minValue and a maxValue all the time, we have the isBST function that returns 
+     * the result of the isBSTUtil function and has int minvalue and int max value already as parameters.
      * This solution does not allow duplicates
      * Time complexity, O(n)
      * 
@@ -167,7 +168,8 @@ public class BinarySearchTree {
 
     public static boolean isBSTUtil(TreeNode root, int minValue, int maxValue) {
         if (root == null) return true;
-        if (root.data > minValue && root.data < maxValue && isBSTUtil(root.left, minValue, root.data) && isBSTUtil(root.right, root.data, maxValue)) {
+        if (root.data > minValue && root.data < maxValue && isBSTUtil(root.left, minValue, root.data) 
+            && isBSTUtil(root.right, root.data, maxValue)) {
             return true;
         } else {
             return false;
