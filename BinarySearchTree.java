@@ -255,6 +255,7 @@ public class BinarySearchTree {
                     ancestor = ancestor.left;
                 } else {
                     ancestor = ancestor.right;
+                    // successor not does change, if curr.data >= ancestor.data
                     // if never into the if statement, successor is null;
                 }
             }
