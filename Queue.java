@@ -33,8 +33,8 @@ public class Queue {
         if (isEmpty(this)) {
             return Integer.MIN_VALUE;
         }
-        int item = this.array[this.front];
-        this.front = (this.front + 1) % this.capacity;
+        int item = this.array[this.front]; // save the current front, then move front
+        this.front = (this.front + 1) % this.capacity; // circular array, when reach the end, start back at index 0
         this.size = this.size - 1;
         return item;
     }
